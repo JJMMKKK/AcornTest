@@ -1,0 +1,39 @@
+sc_01_Login
+- 시작 설정: 		devtools:			애플리케이션의 재시작 없이 소스 코드 변경을 감지하고 자동으로 다시로드
+				lombok:				코드를 줄이고 간결하게 만들어주는 기능을 제공
+				starter-web:		Spring MVC와 내장된 톰캣(Tomcat)을 사용하여 웹 애플리케이션을 구성하는 데 필요한 모든 것을 자동으로 설정
+				starter-test(미설정):	단위 테스트부터 통합 테스트까지 다양한 종류의 테스트를 작성
+			
+- 디펜던시 추가:	starter-security:	스프링 시큐리티를 사용하기 위한 시작 설정
+				security-test:		스프링 시큐리티를 사용하는 애플리케이션의 테스트를 작성할 때 필요
+				
+- 스프링 버전:		2.7.9
+- 자바 버전:		11
+
+- application.properties:
+				#서버설정
+				server.port=8090
+				
+				#기본주소 설정
+				server.servlet.context-path=/
+				
+				#시큐리티 로그 레벨 설정
+				logging.level.org.springframework.security=debug
+				
+				
+***실행하기***				
+- console.log:	Using generated security password: 08006e47-529c-436c-baaa-788994c9cea1
+				This generated password is for development use only. Your security configuration must be updated before running your application in production.
+				--> 출력되는 것을 확인
+				
+				--> http://localhost:8090/**로 접속하면 자동으로 http://localhost:8090/login로 이동
+				
+				--> username: user // password: 08006e47-529c-436c-baaa-788994c9cea1
+				--> 접속 가능(White Label 출력)				
+				
+				--> username: 다른 아이디 // password: 다른 패스워드
+				--> 자격 증명에 실패하였습니다. 출력 확인 
+				
+				
+				
+				
