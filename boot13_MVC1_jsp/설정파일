@@ -1,0 +1,12 @@
+웹프로젝트(mvc) 
+1. pom.xml=> spring web, dev tool  추가 
+2. jsp 사용 => 디펜던시 2개 명시적 추가 
+3.  src 서브 폴더 생성 => main/webapp/WEB-INF/views 폴더 
+  명시적 생성 (jsp 사용 폴더 명시적 생성 )
+4. application.properties 환경설정
+   포트번호
+   프로젝트 주소
+   뷰resolver설정 
+   + db설정 (datasource, mybatis설정(메퍼, alias))
+5. controller작성 (com.example의 서브패키지에 생성 )
+=> /app/main => main.jsp 호출
